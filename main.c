@@ -8,21 +8,22 @@
 int main(void)
 {
 	int verify_reg;
-	system("clear");
-	printf("-----------------------------------------------------------");
-	printf("\n|\n\t***************Welcome to ECK 2022***************\n");
-	printf("\t**Your trusted partner in elections managemant**\n\n\n");
-	printf("-----------------------------------------------------------");
-	printf("\n\nKindly verify your voting status to continue\n\n");
-	printf("Kindly press\n1 to go to the main ECK page or\n2 to register as a voter\n");
+	main_header();
+	printf("\n\n\tKindly choose your category to continue\n\n");
+	printf("\n\tPress 1 for Staff\n\tPress 2 for Candidate\n\tPress 3 for Voter\n\n");
+	printf("______________________________________________________________________\n");
+	printf("\t\t\t\t -->");
 	scanf("%d", &verify_reg);
 	switch (verify_reg)
 	{
 		case 1:
-			main_page();
+			reg_log();
 			break;
 		case 2:
-			registration();
+			candidate();
+			break;
+		case 3:
+			voter();
 			break;
 		default:
 			printf("Kindly enter a valid input");
@@ -30,7 +31,8 @@ int main(void)
 	}
 
 
-	printf("\n\n\n***************Transparent***************\n");
+	printf("\n\n\n\t\t***************Transparent***************\n");
+	printf("=======================================================================\n");
 
 	return (0);
 }
